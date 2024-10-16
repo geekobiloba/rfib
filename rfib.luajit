@@ -1,0 +1,25 @@
+#!/usr/bin/env luajit
+--
+-- Recursive Fibonacci in Lua with luajit
+--
+
+F = string.format
+
+function fib(n)
+  if n<2 then
+    return n
+  else
+    return fib(n-1) + fib(n-2)
+  end
+end
+
+n  = arg and tonumber(arg[1]) or 0
+t0 = os.clock()
+f  = fib(n)
+t1 = os.clock()
+d  = t1 - t0
+
+print(F("Computed fib(%d) = %d recursively in %f seconds", n, f, d))
+
+-- vim: ft=lua: syntax=lua:
+
