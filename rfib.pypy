@@ -1,0 +1,9 @@
+#!/usr/bin/env pypy3
+#
+# Recursive Fibonacci in PyPy
+#
+
+import rfib
+
+# vim: ft=python: syntax=python:
+
